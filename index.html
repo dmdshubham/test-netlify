@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="White Code Labs was awarded as one of top Software
+  Companies in the Financial Services Industry."
+    />
+    <meta name="keywords" content="White code labs, software, JavaScript" />
+    <meta name="author" content="andy chaudhury" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_package/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_package/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_package/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon_package/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon_package/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    /> -->
+    <!-- <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css" /> -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    /> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous"> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.js"></script> -->
+    <!-- <script src="/assets/js/bundel.js"></script> -->
+    <!-- <script src="https://www.whitecodelabs.com/assets/js/fillscreenslider.js" ></script> -->
+
+    <!-- VDN for Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
+    />
+
+    <!-- CDN for Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+    />
+
+    <title>White Code Labs</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            text: {
+              heading: 'var(--text-heading)',
+              base: 'var(--text-base)',
+            },
+            fontFamily: {
+              rubik: ['Rubik', 'sans-serif'], // Replace 'sans' with a custom name if desired
+              lato: ['Lato', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="app" class="[&>*]:font-rubik scroll-smooth"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
