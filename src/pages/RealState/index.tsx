@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Banner from './Banner'
 import Footer from '@components/Footer'
 import { FullPageSlider } from '@components/FullPageSlider'

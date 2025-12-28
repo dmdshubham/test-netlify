@@ -16,8 +16,7 @@ import banner2small from '@images/Home/Hero/banner2small.png'
 import banner3small from '@images/Home/Hero/banner3small.png'
 import banner4small from '@images/Home/Hero/banner4small.png'
 
-import { ReactNode } from '@tanstack/react-router'
-import { useState } from 'react'
+import { useState, ReactNode } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 const bannerData = [
@@ -81,18 +80,18 @@ const BannerContent = ({
 }) => {
   return (
     <div
-      className={`md:bg-[url(${backgroundImage})] bg-[url(${backgroundImageSmall})] bg-[75%] md:bg-center bg-cover bg-no-repeat h-full flex items-center`}
+      className={`md:bg-[url(${backgroundImage})] bg-[url(${backgroundImageSmall})] flex h-full items-center bg-cover bg-[75%] bg-no-repeat md:bg-center`}
     >
-      <div className='md:max-w-6xl md:mx-auto w-full h-96 flex flex-col justify-start items-start pt-5 md:pt-0 px-8 xl:px-0 md:justify-end md:pb-40 text-center gap-20 md:gap-10'>
+      <div className='flex h-96 w-full flex-col items-start justify-start gap-20 px-8 pt-5 text-center md:mx-auto md:max-w-6xl md:justify-end md:gap-10 md:pb-40 md:pt-0 xl:px-0'>
         <h2
           className={twMerge(
-            'max-w-[250px] md:max-w-[65%]  md:mr-auto font-lato text-[21px] md:text-[24px] leading-[31.2px] md:leading-[34px] md:tracking-[-0.2px] font-medium text-left ',
+            'font-lato max-w-[250px]  text-left text-[21px] font-medium leading-[31.2px] md:mr-auto md:max-w-[65%] md:text-[24px] md:leading-[34px] md:tracking-[-0.2px] ',
             `text-[${textColor}]`
           )}
         >
           {content}
         </h2>
-        <div className='w-full flex justify-start'>
+        <div className='flex w-full justify-start'>
           <a href={btnLink} target='_blank'>
             <Button varient={'outline'} text='Learn More' className={''} />
           </a>
@@ -108,7 +107,7 @@ export default function HomeSlider() {
 
   return (
     <>
-      <div className='h-[calc(100dvh-4rem)]x md: h-[100dvh]  relative'>
+      <div className='h-[calc(100dvh-4rem)]x md: relative  h-[100dvh]'>
         <Swiper
           spaceBetween={20}
           modules={[Navigation, Pagination, Autoplay]}
@@ -125,8 +124,8 @@ export default function HomeSlider() {
               <BannerContent {...banner} />
             </SwiperSlide>
           ))}
-          <div className='w-full absolute bottom-16 md:bottom-24  z-10'>
-            <div className='md:max-w-6xl md:mx-auto flex justify-center md:justify-start px-8 xl:px-0'>
+          <div className='absolute bottom-16 z-10 w-full  md:bottom-24'>
+            <div className='flex justify-center px-8 md:mx-auto md:max-w-6xl md:justify-start xl:px-0'>
               <PaginationDots
                 count={bannerData?.length}
                 activeIndex={activeIndex}
@@ -139,12 +138,12 @@ export default function HomeSlider() {
           onClick={() => {
             swiper.slideTo(1)
           }}
-          className='hidden md:block absolute left-1/2 -translate-x-1/2  bottom-6 z-10 w-fit  justify-center p-5  '
+          className='absolute bottom-6 left-1/2 z-10 hidden  w-fit -translate-x-1/2 justify-center  p-5 md:block  '
         >
           <div className='animate-[Jump_1.2s_infinite]'>
             <div className='flex -rotate-[135deg] '>
-              <div className='h-[0.95rem] w-[0.225rem] bg-[#313131] rounded-bl-full rounded-tl-full'></div>
-              <div className='h-[0.225rem] w-[0.75rem] bg-[#313131] rounded-tr-full '></div>
+              <div className='h-[0.95rem] w-[0.225rem] rounded-bl-full rounded-tl-full bg-[#313131]'></div>
+              <div className='h-[0.225rem] w-[0.75rem] rounded-tr-full bg-[#313131] '></div>
             </div>
           </div>
         </button>
@@ -163,7 +162,7 @@ const PaginationDots = ({
   const swiper = useSwiper()
 
   return (
-    <div className='w-[105px] h-[3px] flex items-center gap-1'>
+    <div className='flex h-[3px] w-[105px] items-center gap-1'>
       {Array.from({ length: count })?.map((_, i) => (
         <button
           key={i}
@@ -173,11 +172,11 @@ const PaginationDots = ({
             console.log('====================================')
             swiper.slideToLoop(i)
           }}
-          className={'flex-1 flex justify-center items-center py-1'}
+          className={'flex flex-1 items-center justify-center py-1'}
         >
           <div
             className={twMerge(
-              'transition-all duration-100 bg-[#333333] rounded-xs',
+              'rounded-xs bg-[#333333] transition-all duration-100',
               activeIndex === i
                 ? 'h-[0.35rem] w-[21px]'
                 : 'h-[0.25rem] w-[15px]'

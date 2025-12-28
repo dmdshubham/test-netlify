@@ -5,8 +5,7 @@ import {
   SectionInner,
   SectionOuter,
 } from '../../components/common'
-import { useState } from 'react'
-import { ReactNode } from '@tanstack/react-router'
+import { useState, ReactNode } from 'react'
 import { FaGlobe, FaPhoneAlt } from 'react-icons/fa'
 import { BiSolidMessageRoundedDots } from 'react-icons/bi'
 import { BsPersonFill } from 'react-icons/bs'
