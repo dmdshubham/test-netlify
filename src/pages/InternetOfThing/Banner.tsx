@@ -1,4 +1,4 @@
-import banner from '@images/InternetOfThings/banner.png'
+import banner from '@images/InternetOfThings/Banner.png'
 import bannerSmall from '@images/SoftwareDevelopment/banner_mobile.png'
 import { SectionType1 } from '@components/Sections/SectionType1'
 
